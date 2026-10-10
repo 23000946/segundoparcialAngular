@@ -1,39 +1,145 @@
+<div class="max-w-5xl mx-auto p-6 rounded-lg my-8">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+    
+    <div>
+      <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6 border-b pb-2">
+        Datos Personales
+      </h2>
 
+      <form [formGroup]="formulario">
+        
+        <!-- Nombre -->
+        <div>
+          <label for="nombre" class="block mb-2 text-sm font-medium">
+            Nombre
+          </label>
+          <input
+            type="text"
+            id="nombre"
+            formControlName="nombre"
+            placeholder="Nombre"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+          >
+        </div>
 
-<form class="max-w-md mx-auto">
-  <div class="relative z-0 w-full mb-5 group">
-      <input type="email" name="floating_email" id="floating_email" class="block py-2.5 px-0 w-full text-sm text-heading bg-transparent border-0 border-b-2 border-default-medium appearance-none focus:outline-none focus:ring-0 focus:border-brand peer" placeholder=" " required />
-      <label for="floating_email" class="absolute text-sm text-body duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-fg-brand peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">Email address</label>
-  </div>
-  <div class="relative z-0 w-full mb-5 group">
-      <input type="password" name="floating_password" id="floating_password" class="block py-2.5 px-0 w-full text-sm text-heading bg-transparent border-0 border-b-2 border-default-medium appearance-none focus:outline-none focus:ring-0 focus:border-brand peer" placeholder=" " required />
-      <label for="floating_password" class="absolute text-sm text-body duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-fg-brand peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">Password</label>
-  </div>
-  <div class="relative z-0 w-full mb-5 group">
-      <input type="password" name="repeat_password" id="floating_repeat_password" class="block py-2.5 px-0 w-full text-sm text-heading bg-transparent border-0 border-b-2 border-default-medium appearance-none focus:outline-none focus:ring-0 focus:border-brand peer" placeholder=" " required />
-      <label for="floating_repeat_password" class="absolute text-sm text-body duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-fg-brand peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">Confirm password</label>
-  </div>
-  <div class="grid md:grid-cols-2 md:gap-6">
-    <div class="relative z-0 w-full mb-5 group">
-        <input type="text" name="floating_first_name" id="floating_first_name" class="block py-2.5 px-0 w-full text-sm text-heading bg-transparent border-0 border-b-2 border-default-medium appearance-none focus:outline-none focus:ring-0 focus:border-brand peer" placeholder=" " required />
-        <label for="floating_first_name" class="absolute text-sm text-body duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-fg-brand peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">First name</label>
-    </div>
-    <div class="relative z-0 w-full mb-5 group">
-        <input type="text" name="floating_last_name" id="floating_last_name" class="block py-2.5 px-0 w-full text-sm text-heading bg-transparent border-0 border-b-2 border-default-medium appearance-none focus:outline-none focus:ring-0 focus:border-brand peer" placeholder=" " required />
-        <label for="floating_last_name" class="absolute text-sm text-body duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-fg-brand peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">Last name</label>
-    </div>
-  </div>
-  <div class="grid md:grid-cols-2 md:gap-6">
-    <div class="relative z-0 w-full mb-5 group">
-        <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="floating_phone" id="floating_phone" class="block py-2.5 px-0 w-full text-sm text-heading bg-transparent border-0 border-b-2 border-default-medium appearance-none focus:outline-none focus:ring-0 focus:border-brand peer" placeholder=" " required />
-        <label for="floating_phone" class="absolute text-sm text-body duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-fg-brand peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">Phone number</label>
-    </div>
-    <div class="relative z-0 w-full mb-5 group">
-        <input type="text" name="floating_company" id="floating_company" class="block py-2.5 px-0 w-full text-sm text-heading bg-transparent border-0 border-b-2 border-default-medium appearance-none focus:outline-none focus:ring-0 focus:border-brand peer" placeholder=" " required />
-        <label for="floating_company" class="absolute text-sm text-body duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-fg-brand peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">Company (Ex. Google)</label>
-    </div>
-  </div>
-  <button type="submit" class="text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">Submit</button>
-</form>
+        <div>
+          <label for="apellidop" class="block mb-2 text-sm font-medium">
+            Apellido Paterno
+          </label>
+          <input
+            type="text"
+            id="apellidop"
+            formControlName="apellidop"
+            placeholder="Apellido Paterno"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+          >
+        </div>
 
+        <div>
+          <label for="apellidom" class="block mb-2 text-sm font-medium">
+            Apellido Materno
+          </label>
+          <input
+            type="text"
+            id="apellidom"
+            formControlName="apellidom"
+            placeholder="Apellido Materno"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+          >
+        </div>
 
+        <label class="block mb-2 text-sm font-medium mt-4">
+          Fecha de nacimiento
+        </label>
+        
+        <!-- Fecha de nacimiento -->
+        <div>
+          <div class="grid grid-cols-3 gap-3">
+            <div>
+              <input
+                type="number"
+                formControlName="dia"
+                placeholder="Día"
+                class="bg-gray-50 border text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+              >
+            </div>
+            <div>
+              <input
+                type="number"
+                formControlName="mes"
+                placeholder="Mes"
+                class="bg-gray-50 border text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+              >
+            </div>
+            <div>
+              <input
+                type="number"
+                formControlName="anio"
+                placeholder="Año"
+                class="bg-gray-50 border text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-4">
+          <label class="block mb-2 text-sm font-medium">
+            Sexo
+          </label>
+          <div class="space-y-2">
+            <div class="flex items-center">
+              <input
+                id="sexo-masculino"
+                type="radio"
+                value="Masculino"
+                formControlName="sexo"
+                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+              >
+              <label for="sexo-masculino" class="ms-2 text-sm font-medium">
+                Masculino
+              </label>
+            </div>
+            <div class="flex items-center">
+              <input
+                id="sexo-femenino"
+                type="radio"
+                value="Femenino"
+                formControlName="sexo"
+                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+              >
+              <label for="sexo-femenino" class="ms-2 text-sm font-medium">
+                Femenino
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Botón Imprimir -->
+        <div class="pt-4">
+          <button
+            type="button"
+            (click)="imprimir()"
+            class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          >
+            Calcular tu signo
+          </button>
+        </div>
+
+      </form>
+    </div>
+
+    <div class="border-t md:border-t-0 md:border-l border-gray-200 dark:border-gray-700 pt-6 md:pt-0 md:pl-8 flex flex-col items-center justify-center">
+      <div *ngIf="resultado" class="space-y-4 flex flex-col items-center">
+        <h3 class="text-lg font-semibold">Hola: {{ resultado.nombreCompleto }}</h3>
+        <h3 class="text-lg font-semibold">Tienes una edad de: {{ resultado.edad }} años</h3>
+        <h3 class="text-lg font-semibold">Tu signo zodiacal: {{ resultado.signo }}</h3>
+          <img 
+            [src]="'assets/img/' + resultado.imagenSigno" 
+            [alt]="resultado.signo"
+            class="w-48 h-48 object-contain mt-4"
+          >
+  </div>
+</div>
+
+  </div>
+</div>
